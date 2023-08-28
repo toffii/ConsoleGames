@@ -129,7 +129,5 @@ class Hundred
         {
             Console.WriteLine(playerNames[i] + ": " + playerScores[i]);
         }
-        Console.WriteLine("________________");
-
     }
 }
