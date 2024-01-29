@@ -79,13 +79,13 @@ class Hundred
         Console.WriteLine("________________");
         Console.WriteLine("It is " + playerNames[playernumber] + "'s turn!");
 
+        int newDice = 0;
         int turnpoints = 0;
         string diceagain = "y";
 
 
         while (diceagain == "y")
         {
-            int newDice = RollDice();
 
             if (newDice == 1)
             {
@@ -103,12 +103,14 @@ class Hundred
             }
 
             Console.WriteLine("Points this far in this round: " + turnpoints);
-            Console.WriteLine("Roll dice again? (y/n)");
+            Console.WriteLine("Roll dice? (y/n)");
             diceagain = Console.ReadLine();
             if (diceagain == "n")
             {
-                continue;
+                break;
             }
+            newDice = RollDice();
+
         }
 
         Console.WriteLine("You gathered " + turnpoints + " points this round, amazing!");
